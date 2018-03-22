@@ -136,8 +136,9 @@ To augment the data sat, I also flipped images and angles thinking that this wou
 ![Center Image](./images/Center-Image.png)
 ![Flip Image](./images/Flip-Image.png)
 
+Moreover, I used the left and right cameras in order to improve the performance of the driving. In order to reduce the total numbel of images I toke half of the images by taking only the pair images in the chronological sequence. 
 
-After the collection process, I had 20000 number of data points. I then preprocessed this data by normalization based on the following formula:
+After the collection process, I had approximately 20000 number of data points. I then preprocessed this data by normalization based on the following formula:
 
 ```sh
 pixel_normalized = pixel/255 -0.5
