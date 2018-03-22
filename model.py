@@ -47,15 +47,32 @@ images = []
 measurements = []
 for line in lines:
     numLines= numLines+1
-    #center images
-    source_path = line[0]
-    filename = source_path.split('\\')[-1]
-    current_path = 'Teste4/IMG/' +filename
-    image = cv2.imread(current_path)
-    images.append(image)
-    measurement = float(line[3])
-    measurements.append(measurement)
+	if (numLimes %2 ==1):
+		#center images
+		source_path = line[0]
+		filename = source_path.split('\\')[-1]
+		current_path = 'Teste4/IMG/' +filename
+		image = cv2.imread(current_path)
+		images.append(image)
+		measurement = float(line[3])
+		measurements.append(measurement)
+		#left images
+		source_path = line[1]
+		filename = source_path.split('\\')[-1]
+		current_path = 'Teste4/IMG/' +filename
+		image = cv2.imread(current_path)
+		images.append(image)
+		measurement = float(line[3])+0.2
+		measurements.append(measurement)
 
+		#left images
+		source_path = line[2]
+		filename = source_path.split('\\')[-1]
+		current_path = 'Teste4/IMG/' +filename
+		image = cv2.imread(current_path)
+		images.append(image)
+		measurement = float(line[3])-0.2
+		measurements.append(measurement)
     if (numLines >10000):
         break
 
